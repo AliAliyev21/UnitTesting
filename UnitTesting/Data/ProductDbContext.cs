@@ -1,0 +1,11 @@
+﻿using Microsoft.EntityFrameworkCore;
+using UnitTesting.Entities;
+
+namespace UnitTesting.Data
+{
+    public class ProductDbContext : DbContext
+    {
+        public ProductDbContext(DbContextOptions<ProductDbContext> options) : base(options) { }
+        public DbSet<Product> Products { get; set; }
+    }
+}
